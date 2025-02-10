@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéWeb - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/include.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>includeHTML('includes/header.html', 'header');</script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/1920x500/FF0000/FFFFFF/png?text=Explora+el+Mundo+Pokemon" class="d-block w-100" alt="Pokemon Banner 1">
+                    <div class="carousel-caption" data-aos="fade-up">
+                        <h2 class="pokemon-font">Explora el Mundo Pokémon</h2>
+                        <p>Descubre información detallada sobre tus Pokémon favoritos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1920x500/3B4CCA/FFFFFF/png?text=Bayas+y+Objetos" class="d-block w-100" alt="Pokemon Banner 2">
+                    <div class="carousel-caption" data-aos="fade-up">
+                        <h2 class="pokemon-font">Bayas y Objetos</h2>
+                        <p>Conoce todos los items disponibles en el juego</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1920x500/FFDE00/000000/png?text=Movimientos+y+Estrategias" class="d-block w-100" alt="Pokemon Banner 3">
+                    <div class="carousel-caption" data-aos="fade-up">
+                        <h2 class="pokemon-font">Movimientos y Estrategias</h2>
+                        <p>Aprende sobre los diferentes movimientos y sus efectos</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Pokemon Section -->
+    <section class="container mt-5" data-aos="fade-up">
+        <h2 class="pokemon-font text-center mb-4">Pokémon Destacados</h2>
+        <div id="featured-pokemon" class="row"></div>
+    </section>
+
+    <!-- Quick Access Cards -->
+    <section class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 hover-card">
+                    <div class="card-body text-center">
+                        <i class="material-icons md-48">catching_pokemon</i>
+                        <h3 class="pokemon-font mt-3">Pokédex</h3>
+                        <p>Explora la base de datos completa de Pokémon</p>
+                        <a href="pokedex.html" class="btn btn-primary">Ver Pokédex</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 hover-card">
+                    <div class="card-body text-center">
+                        <i class="material-icons md-48">eco</i>
+                        <h3 class="pokemon-font mt-3">Bayas</h3>
+                        <p>Descubre todas las bayas y sus efectos</p>
+                        <a href="berries.html" class="btn btn-primary">Ver Bayas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 hover-card">
+                    <div class="card-body text-center">
+                        <i class="material-icons md-48">place</i>
+                        <h3 class="pokemon-font mt-3">Ubicaciones</h3>
+                        <p>Explora las diferentes regiones y lugares</p>
+                        <a href="locations.html" class="btn btn-primary">Ver Ubicaciones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-light py-5 mt-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 class="pokemon-font">898</h3>
+                        <p>Pokémon</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 class="pokemon-font">64</h3>
+                        <p>Bayas</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 class="pokemon-font">937</h3>
+                        <p>Movimientos</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 class="pokemon-font">18</h3>
+                        <p>Tipos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="container mt-5">
+        <h2 class="pokemon-font text-center mb-4" data-aos="fade-up">Últimas Novedades</h2>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="card mb-4">
+                    <img src="https://placehold.co/800x400/FF0000/FFFFFF/png?text=Nuevas+Funcionalidades" class="card-img-top" alt="Pokemon News">
+                    <div class="card-body">
+                        <h5 class="card-title pokemon-font">Nuevas Funcionalidades</h5>
+                        <p class="card-text">Explora las nuevas características de nuestra Pokédex</p>
+                        <span class="badge bg-primary">Nuevo</span>
+                        <span class="badge bg-secondary">Pokédex</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="card mb-4">
+                    <img src="https://placehold.co/800x400/3B4CCA/FFFFFF/png?text=Guia+de+Bayas" class="card-img-top" alt="Pokemon News">
+                    <div class="card-body">
+                        <h5 class="card-title pokemon-font">Guía de Bayas</h5>
+                        <p class="card-text">Aprende a utilizar las bayas de manera efectiva</p>
+                        <span class="badge bg-primary">Guía</span>
+                        <span class="badge bg-secondary">Bayas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script>includeHTML('includes/footer.html', 'footer');</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

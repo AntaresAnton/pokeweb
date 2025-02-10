@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéWeb - Bayas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/include.js"></script>
+</head>
+<body class="berries-page">
+    <div id="header"></div>
+    <script>includeHTML('includes/header.html', 'header');</script>
+
+    <!-- Hero Section -->
+    <section class="berry-hero text-center py-5 mb-4">
+        <div class="container">
+            <h1 class="pokemon-font" data-aos="fade-down">Bayas Pokémon</h1>
+            <p class="lead" data-aos="fade-up">Descubre todas las bayas y sus efectos en el mundo Pokémon</p>
+        </div>
+    </section>
+
+    <main class="container mt-4">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-md-3">
+                <div class="card filter-card mb-4" data-aos="fade-right">
+                    <div class="card-header pokemon-font bg-success text-white">
+                        <i class="material-icons align-middle me-2">filter_alt</i>
+                        Filtros
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6 class="pokemon-font">Firmeza</h6>
+                            <select class="form-select" id="firmness-filter">
+                                <option value="">Todas las firmezas</option>
+                                <option value="very-soft">Muy Suave</option>
+                                <option value="soft">Suave</option>
+                                <option value="hard">Dura</option>
+                                <option value="very-hard">Muy Dura</option>
+                                <option value="super-hard">Super Dura</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="pokemon-font">Sabores</h6>
+                            <div class="flavor-filters">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="spicy" id="flavor-spicy">
+                                    <label class="form-check-label" for="flavor-spicy">
+                                        <span class="flavor-dot spicy"></span> Picante
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="dry" id="flavor-dry">
+                                    <label class="form-check-label" for="flavor-dry">
+                                        <span class="flavor-dot dry"></span> Seco
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="sweet" id="flavor-sweet">
+                                    <label class="form-check-label" for="flavor-sweet">
+                                        <span class="flavor-dot sweet"></span> Dulce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="bitter" id="flavor-bitter">
+                                    <label class="form-check-label" for="flavor-bitter">
+                                        <span class="flavor-dot bitter"></span> Amargo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="sour" id="flavor-sour">
+                                    <label class="form-check-label" for="flavor-sour">
+                                        <span class="flavor-dot sour"></span> Ácido
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Guide -->
+                <div class="card mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card-header pokemon-font bg-info text-white">
+                        <i class="material-icons align-middle me-2">help_outline</i>
+                        Guía Rápida
+                    </div>
+                    <div class="card-body">
+                        <p class="small">Las bayas son objetos que pueden ser plantados y cosechados. Cada baya tiene efectos únicos cuando se usa en batalla o se procesa.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Berries Grid -->
+            <div class="col-md-9">
+                <div id="berries-grid" class="row g-4"></div>
+                <div class="d-flex justify-content-center mt-4" data-aos="fade-up">
+                    <button id="load-more-berries" class="btn btn-lg btn-success">
+                        <i class="material-icons">add</i> Cargar más Bayas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script>includeHTML('includes/footer.html', 'footer');</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

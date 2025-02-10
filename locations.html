@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéWeb - Ubicaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/include.js"></script>
+</head>
+<body class="locations-page">
+    <div id="header"></div>
+    <script>includeHTML('includes/header.html', 'header');</script>
+
+    <!-- Hero Section -->
+    <section class="location-hero text-center py-5">
+        <div class="container">
+            <h1 class="pokemon-font" data-aos="fade-down">Regiones Pokémon</h1>
+            <p class="lead" data-aos="fade-up">Explora las diferentes regiones del mundo Pokémon</p>
+        </div>
+    </section>
+
+    <main class="container mt-4">
+        <div class="row">
+            <!-- Region List -->
+            <div class="col-md-3">
+                <div class="card region-card" data-aos="fade-right">
+                    <div class="card-header pokemon-font bg-primary text-white">
+                        <i class="material-icons align-middle me-2">public</i>
+                        Regiones
+                    </div>
+                    <div class="card-body p-0">
+                        <div id="region-list" class="list-group list-group-flush">
+                            <!-- Regions will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Details -->
+            <div class="col-md-9">
+                <div id="location-details" class="card" data-aos="fade-left">
+                    <div class="card-body">
+                        <div id="location-info">
+                            <!-- Region info will be displayed here -->
+                            <div class="text-center initial-message">
+                                <i class="material-icons md-48">travel_explore</i>
+                                <h3 class="pokemon-font mt-3">Selecciona una región</h3>
+                                <p>Descubre las ubicaciones y los Pokémon que habitan en ella</p>
+                            </div>
+                        </div>
+                        <div id="pokemon-encounters" class="mt-4">
+                            <!-- Pokemon encounters will be listed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Region Map Section -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card map-card" data-aos="fade-up">
+                    <div class="card-header pokemon-font bg-info text-white">
+                        <i class="material-icons align-middle me-2">map</i>
+                        Mapa de la Región
+                    </div>
+                    <div class="card-body">
+                        <div id="region-map" class="text-center">
+                            <!-- Region map will be displayed here -->
+                            <img src="https://placehold.co/1200x600/3B4CCA/FFFFFF/png?text=Mapa+de+la+Region" 
+                                 class="img-fluid rounded" 
+                                 alt="Region Map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script>includeHTML('includes/footer.html', 'footer');</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="assets/js/locations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

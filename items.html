@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéWeb - Items</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/include.js"></script>
+</head>
+<body class="items-page">
+    <div id="header"></div>
+    <script>includeHTML('includes/header.html', 'header');</script>
+
+    <!-- Hero Section -->
+    <section class="items-hero text-center py-5">
+        <div class="container">
+            <h1 class="pokemon-font" data-aos="fade-down">Objetos Pokémon</h1>
+            <p class="lead" data-aos="fade-up">Explora todos los objetos del mundo Pokémon</p>
+        </div>
+    </section>
+
+    <main class="container mt-4">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3">
+                <!-- Search Box -->
+                <div class="search-wrapper mb-4" data-aos="fade-right">
+                    <div class="input-group">
+                        <span class="input-group-text bg-primary text-white">
+                            <i class="material-icons">search</i>
+                        </span>
+                        <input type="text" class="form-control" id="item-search" 
+                               placeholder="Buscar objeto...">
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="card filter-card mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card-header pokemon-font bg-primary text-white">
+                        <i class="material-icons align-middle me-2">category</i>
+                        Categorías
+                    </div>
+                    <div class="card-body">
+                        <div id="item-categories" class="list-group"></div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="card stats-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="card-header pokemon-font bg-info text-white">
+                        <i class="material-icons align-middle me-2">analytics</i>
+                        Estadísticas
+                    </div>
+                    <div class="card-body">
+                        <div class="quick-stat">
+                            <span>Total de Objetos</span>
+                            <h4 class="pokemon-font">954</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <!-- Active Filters -->
+                <div class="active-filters mb-4" data-aos="fade-up">
+                    <div id="active-filters" class="d-flex flex-wrap gap-2"></div>
+                </div>
+
+                <!-- Items Grid -->
+                <div id="items-grid" class="row g-4"></div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-4" data-aos="fade-up">
+                    <button id="load-more-items" class="btn btn-primary">
+                        <i class="material-icons">add</i> Cargar más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script>includeHTML('includes/footer.html', 'footer');</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/items.js"></script>
+</body>
+</html>
