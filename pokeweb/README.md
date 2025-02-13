@@ -48,7 +48,7 @@ A comprehensive Pokémon information platform built with React, featuring an int
 cd pokeweb
 npm install
 
-
+´´
 pokeweb/
 ├── src/
 │   ├── components/
@@ -62,6 +62,7 @@ pokeweb/
 │   └── utils/
 └── public/
     └── assets/
+´´
 
 
 1. Clone the repository:
