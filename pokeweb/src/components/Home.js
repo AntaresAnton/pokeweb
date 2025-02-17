@@ -304,34 +304,53 @@ function Home() {
 
 
 
-            {/* Latest News Section */}
-            <section className="container mt-5">
-                <h2 className="pokemon-font text-center mb-4" data-aos="fade-up">Últimas Novedades</h2>
-                <div className="row">
-                    <div className="col-md-6" data-aos="fade-right">
-                        <div className="card mb-4">
-                            <img src="https://placehold.co/800x400/FF0000/FFFFFF/png?text=Nuevas+Funcionalidades" className="card-img-top" alt="Pokemon News" />
-                            <div className="card-body">
-                                <h5 className="card-title pokemon-font">Nuevas Funcionalidades</h5>
-                                <p className="card-text">Explora las nuevas características de nuestra Pokédex</p>
-                                <span className="badge bg-primary">Nuevo</span>
-                                <span className="badge bg-secondary">Pokédex</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6" data-aos="fade-left">
-                        <div className="card mb-4">
-                            <img src="https://placehold.co/800x400/3B4CCA/FFFFFF/png?text=Guia+de+Bayas" className="card-img-top" alt="Pokemon News" />
-                            <div className="card-body">
-                                <h5 className="card-title pokemon-font">Guía de Bayas</h5>
-                                <p className="card-text">Aprende a utilizar las bayas de manera efectiva</p>
-                                <span className="badge bg-primary">Guía</span>
-                                <span className="badge bg-secondary">Bayas</span>
-                            </div>
-                        </div>
+<section className="container mt-5 news-section">
+    <h2 className="pokemon-font text-center mb-4" data-aos="fade-up">
+        Últimas Novedades
+    </h2>
+    <div className="row">
+        <div className="col-md-6" data-aos="fade-right">
+            <div className="card mb-4 news-card">
+                <div className="card-image-wrapper">
+                    <img 
+                        src="https://placehold.co/800x400/FF0000/FFFFFF/png?text=Nuevas+Funcionalidades" 
+                        className="card-img-top" 
+                        alt="Nuevas Funcionalidades Pokédex" 
+                    />
+                </div>
+                <div className="card-body">
+                    <h5 className="card-title pokemon-font">Nuevas Funcionalidades</h5>
+                    <p className="card-text">Explora las nuevas características de nuestra Pokédex</p>
+                    <div className="badge-container">
+                        <span className="badge bg-primary">Nuevo</span>
+                        <span className="badge bg-secondary">Pokédex</span>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+
+        <div className="col-md-6" data-aos="fade-left">
+            <div className="card mb-4 news-card">
+                <div className="card-image-wrapper">
+                    <img 
+                        src="https://placehold.co/800x400/3B4CCA/FFFFFF/png?text=Guia+de+Bayas" 
+                        className="card-img-top" 
+                        alt="Guía de Bayas Pokémon" 
+                    />
+                </div>
+                <div className="card-body">
+                    <h5 className="card-title pokemon-font">Guía de Bayas</h5>
+                    <p className="card-text">Aprende a utilizar las bayas de manera efectiva</p>
+                    <div className="badge-container">
+                        <span className="badge bg-primary">Guía</span>
+                        <span className="badge bg-secondary">Bayas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         </>
     );
 }
