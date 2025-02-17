@@ -1,0 +1,31 @@
+name: Calidad de Código
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  calidad:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Instalar dependencias
+      run: npm ci
+      
+    - name: Ejecutar ESLint
+      run: npm run lint
+      
+    - name: Ejecutar Pruebas
+      run: npm test
+      
+    - name: Verificar formato de código
+      run: npm run prettier:check
