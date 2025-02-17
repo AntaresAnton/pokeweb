@@ -212,6 +212,117 @@ h3.pokemon-font {
 }
 
 
+/* seccion de noticias */
+/* News Section Styling */
+.news-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Card Styling */
+.news-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(59, 76, 202, 0.2);
+}
+
+/* Card Image */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Card Title */
+.card-title.pokemon-font {
+    color: #3B4CCA;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0 #FFDE00;
+}
+
+/* Card Text */
+.card-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Badges */
+.badge {
+    padding: 8px 12px;
+    margin-right: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 15px;
+}
+
+.bg-primary {
+    background: #3B4CCA !important;
+    transition: all 0.3s ease;
+}
+
+.bg-secondary {
+    background: #FF0000 !important;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+}
+
+/* Card Body */
+.card-body {
+    padding: 1.5rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Section Title */
+.pokemon-font.text-center {
+    font-size: 2.5rem;
+    color: #3B4CCA;
+    text-shadow: 2px 2px 0 #FFDE00;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.pokemon-font.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3B4CCA, #FF0000);
+    border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px;
+    }
+    
+    .pokemon-font.text-center {
+        font-size: 2rem;
+    }
+}
+
+
 
 /* seccion principal secciones (abajo de los pokemon) */
 .hover-card {

@@ -18,18 +18,37 @@ export async function getEvolutionChainData(pokemonName) {
     const chainId = species.evolution_chain.url.split('/').filter(Boolean).pop();
     const evolutionChain = await fetchData(`/evolution-chain/${chainId}`);
     
-    if (!evolutionChain || !evolutionChain.chain) {
-        throw new Error('Invalid evolution chain data');
+    // Añadir datos de Pokémon a cada nodo de la cadena
+    const enrichedChain = await enrichChainWithPokemonData(evolutionChain.chain);
+    
+    return { ...evolutionChain, chain: enrichedChain };
+}
+
+async function enrichChainWithPokemonData(chain) {
+    const pokemon = await fetchData(`/pokemon/${chain.species.name}`);
+    const enrichedNode = {
+        ...chain,
+        id: pokemon.id,
+        sprites: pokemon.sprites,
+        types: pokemon.types
+    };
+
+    if (chain.evolves_to?.length > 0) {
+        enrichedNode.evolves_to = await Promise.all(
+            chain.evolves_to.map(evolution => enrichChainWithPokemonData(evolution))
+        );
     }
 
-    return evolutionChain;
+    return enrichedNode;
 }
+
 
 export async function getPokemonEvolutionData(chainNode) {
     const pokemon = await fetchData(`/pokemon/${chainNode.species.name}`);
     return {
         name: pokemon.name.toUpperCase(),
-        sprite: pokemon.sprites.other['official-artwork'].front_default,
+        sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`,
+        
         fallbackSprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`,
         types: pokemon.types.map(type => ({
             name: type.type.name,
@@ -37,6 +56,7 @@ export async function getPokemonEvolutionData(chainNode) {
         }))
     };
 }
+
 
 export function formatEvolutionDetails(chain) {
     const details = [];
