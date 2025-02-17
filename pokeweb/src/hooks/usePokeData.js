@@ -19,7 +19,7 @@ export function usePokeData(fetchFunction, dependencies = []) {
         };
 
         fetchData();
-    }, dependencies);
+    }, [fetchFunction]);
 
     return { data, loading, error };
 }
