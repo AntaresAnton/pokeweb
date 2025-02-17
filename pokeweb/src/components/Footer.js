@@ -23,7 +23,12 @@ function Footer() {
               <li><Link to="/berries">Bayas</Link></li>
               <li><Link to="/locations">Ubicaciones</Link></li>
               <li><Link to="/moves">Movimientos</Link></li>
+              
             </ul>
+            <a href="/social-media-link" className="social-link">...</a>
+<a href="/terms" className="footer-link">...</a>
+<a href="/privacy" className="footer-link">...</a>
+
           </div>
           <div className="col-md-4">
             <h5 className="pokemon-font text-primary">Tipos Pokémon</h5>

@@ -1,55 +1,49 @@
-# PokéWeb React Application
+# 🌟 PokéWeb - Aplicación React de Pokémon
 
-A comprehensive Pokémon information platform built with React, featuring an intuitive interface and real-time data from PokéAPI.
+## 📋 Descripción General
+Una plataforma completa de información sobre Pokémon construida con React, que ofrece una interfaz intuitiva y datos en tiempo real desde PokéAPI.
 
-## 🌟 Core Features
+## ⭐ Características Principales
 
-### Pokédex
-- Advanced filtering system by type and generation
-- Real-time search functionality
-- Detailed Pokémon statistics and information
-- Responsive grid layout with animated cards
-- Infinite scroll pagination
+### 📱 Pokédex
+- 🔍 Sistema avanzado de filtrado por tipo y generación
+- ⚡ Búsqueda en tiempo real
+- 📊 Estadísticas detalladas de cada Pokémon
+- 🎨 Diseño responsive con tarjetas animadas
+- 🔄 Paginación con scroll infinito
 
-### Evolution Chains
-- Interactive evolution tree visualization
-- Detailed evolution requirements
-- Level-up conditions
-- Item-based evolution details
-- Trade evolution specifications
+### 🌿 Cadenas de Evolución
+- 🌳 Visualización interactiva del árbol evolutivo
+- 📝 Requisitos detallados de evolución
+- ⬆️ Condiciones de nivel
+- 🎁 Detalles de evolución por objetos
+- 🤝 Especificaciones de evolución por intercambio
 
-### Berries System
-- Complete berry catalog with filtering
-- Firmness categorization
-- Flavor combination system
-- Growth time information
-- Effect descriptions
-- Dynamic loading with pagination
+### 🍇 Sistema de Bayas
+- 🗂️ Catálogo completo de bayas con filtros
+- 💪 Categorización por firmeza
+- 🌈 Sistema de combinación de sabores
+- ⏲️ Información de tiempo de crecimiento
+- ✨ Descripción de efectos
+- 📥 Carga dinámica con paginación
 
-### Locations
-- Region-based navigation
-- Area-specific Pokémon encounters
-- Interactive region maps
-- Location-based item findings
-- Habitat information
+### 🗺️ Ubicaciones
+- 🌍 Navegación por regiones
+- 🦁 Encuentros con Pokémon específicos por área
+- 🗺️ Mapas interactivos de regiones
+- 🎯 Objetos encontrados por ubicación
+- 🌲 Información de hábitats
 
-## 🛠 Technical Stack
+## 🛠️ Stack Tecnológico
+- ⚛️ React 18+
+- 🎨 Material-UI Components
+- 📐 Bootstrap 5 para layouts
+- 💫 AOS (Animate On Scroll)
+- 🎯 CSS personalizado con tema Pokémon
+- 🔌 Integración con PokéAPI
 
-- React 18+
-- Material-UI Components
-- Bootstrap 5 for layouts
-- AOS (Animate On Scroll)
-- Custom CSS with Pokémon theming
-- PokéAPI integration
-
-## 🚀 Quick Start
-
-""Install dependencies:
-cd pokeweb
-npm install
-
-´´
-pokeweb/
+## 📁 Estructura del Proyecto
+```pokeweb/
 ├── src/
 │   ├── components/
 │   │   ├── Pokedex/
@@ -62,10 +56,10 @@ pokeweb/
 │   └── utils/
 └── public/
     └── assets/
-´´
 
-
-1. Clone the repository:
-```bash
+Clonar el repositorio:
 git clone https://github.com/antaresanton/pokeweb.git
 
+
+Instalar dependencias:
+cd pokeweb && npm install
